@@ -5,16 +5,12 @@
 import sys
 get_ipython().system('{sys.executable} -m pip install psycopg2-binary --only-binary :all:')
 
-
-
-
-
 import pandas as pd
 import psycopg2
 from sqlalchemy import create_engine
 
 # File path
-path = r'C:\Users\MAHADEV\Downloads\archive (5)\\'
+path = "data/"
 
 # EXTRACT — Load all 5 CSV files
 orders_df = pd.read_csv(path + 'olist_orders_dataset.csv')
@@ -213,10 +209,11 @@ print(final_df.isnull().sum())
 print(final_df.isnull().sum())
 print(f"\nShape: {final_df.shape}")
 
+# Replace the dummy credentials below with your own PostgreSQL credentials
 
-from sqlalchemy import create_engine
-
-engine = create_engine('postgresql+psycopg2://postgres:12345@localhost:5432/olist_db')
+engine = create_engine(
+    "postgresql+psycopg2://your_username:your_password@localhost:5432/your_database"
+)
 
 final_df.to_sql('olist_orders', engine, if_exists='replace', index=False)
 
@@ -250,6 +247,9 @@ GROUP BY order_month ORDER BY order_month asc
 """ 
 result = pd.read_sql(query, engine) 
 print(result)
+
+engine.dispose()
+print("Database connection closed.")
 
 
 
