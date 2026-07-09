@@ -252,4 +252,4 @@ Built as a portfolio project demonstrating end-to-end data engineering skills:
 multi-source extraction, production-grade transformation, PostgreSQL loading,
 and SQL-based business analysis on a real 100,000+ row dataset.
 
-**🔗 Connect:** [LinkedIn]([your-linkedin-url](https://www.linkedin.com/in/sonal-kumar-datascience/)) |
+**🔗 Connect:** [LinkedIn]([https://www.linkedin.com/in/sonal-kumar-datascience/]) | [GitHub](https://github.com/Sonalkumar17297/olist-ecommerce-etl-pipeline)
