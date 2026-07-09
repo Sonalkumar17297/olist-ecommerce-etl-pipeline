@@ -191,9 +191,12 @@ python olist_etl_pipeline.py
 ```
 
 ### Connection Configuration
+
+Update the PostgreSQL connection settings in `olist_etl_pipeline.py` with your local database credentials before running the pipeline.
+
 ```python
 engine = create_engine(
-    'postgresql+psycopg2://username:password@localhost:5432/olist_db'
+    "postgresql+psycopg2://<username>:<password>@localhost:5432/olist_db"
 )
 ```
 
